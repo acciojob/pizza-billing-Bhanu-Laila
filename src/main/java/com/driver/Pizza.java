@@ -29,6 +29,8 @@ public class Pizza {
         }
         cheesePrice = 80;
         paperBagPrice = 20;
+        totalPrice = totalPrice + basePrice;
+        bill = bill + "Base Price Of The Pizza: " + basePrice+ "/n";
 
     }
 
