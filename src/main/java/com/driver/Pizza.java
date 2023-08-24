@@ -9,6 +9,7 @@ public class Pizza {
     public Boolean isCheeseAdded = false;
     public Boolean isToppingsAdded = false;
     public Boolean isPaperBagAdded = false;
+    public Boolean isBillGenerated = false;
     public int basePrice;
     public int cheesePrice;
     public int toppingsPrice;
@@ -32,8 +33,6 @@ public class Pizza {
     }
 
     public int getPrice(){
-        totalPrice = totalPrice + basePrice;
-        bill = bill + "Base Price Of The Pizza:" + basePrice + "/n";
         return this.totalPrice;
     }
 
@@ -70,7 +69,11 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        bill = bill + "Total Price: " + totalPrice + "/n";
+        if(!isBillGenerated){
+            bill = bill + "Total Price: " + totalPrice + "/n";
+            isBillGenerated = true;
+        }
+
         return this.bill;
     }
 }
