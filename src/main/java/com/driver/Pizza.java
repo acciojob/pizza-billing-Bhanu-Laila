@@ -30,7 +30,7 @@ public class Pizza {
         cheesePrice = 80;
         paperBagPrice = 20;
         totalPrice = totalPrice + basePrice;
-        bill = bill + "Base Price Of The Pizza: " + basePrice+ "/n";
+        bill = bill + "Base Price Of The Pizza: "+basePrice+"\n";
 
     }
 
@@ -42,7 +42,7 @@ public class Pizza {
         // your code goes here
         if(!isCheeseAdded){
             totalPrice = totalPrice + cheesePrice;
-            bill = bill + "Extra Cheese Added: " + cheesePrice+ "/n";
+            bill = bill + "Extra Cheese Added: "+cheesePrice+"\n";
             isCheeseAdded = true;
         }
 
@@ -52,7 +52,7 @@ public class Pizza {
         // your code goes here
         if(!isToppingsAdded){
             totalPrice = totalPrice + toppingsPrice;
-            bill = bill + "Extra Toppings Added: " + toppingsPrice + "/n";
+            bill = bill + "Extra Toppings Added: "+toppingsPrice+"\n";
             isToppingsAdded = true;
         }
 
@@ -63,7 +63,7 @@ public class Pizza {
         // your code goes here
         if(!isPaperBagAdded){
             totalPrice = totalPrice + paperBagPrice;
-            bill= bill + "Paperbag Added: " + paperBagPrice +"/n";
+            bill= bill + "Paperbag Added: "+paperBagPrice+"\n";
             isPaperBagAdded = true;
         }
 
@@ -72,7 +72,7 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(!isBillGenerated){
-            bill = bill + "Total Price: " + totalPrice + "/n";
+            bill = bill + "Total Price: " + totalPrice;
             isBillGenerated = true;
         }
 
