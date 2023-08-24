@@ -29,7 +29,7 @@ public class Pizza {
         }
         cheesePrice = 80;
         paperBagPrice = 20;
-        totalPrice = basePrice;
+        this.totalPrice = this.basePrice;
 
 
     }
@@ -41,9 +41,8 @@ public class Pizza {
     public void addExtraCheese(){
         // your code goes here
         if(!isCheeseAdded){
-            totalPrice = totalPrice + cheesePrice;
-
             isCheeseAdded = true;
+            this.totalPrice = this.totalPrice + this.cheesePrice;
         }
 
     }
@@ -51,9 +50,8 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(!isToppingsAdded){
-            totalPrice = totalPrice + toppingsPrice;
-
             isToppingsAdded = true;
+            this.totalPrice = this.totalPrice + this.toppingsPrice;
         }
 
 
@@ -62,8 +60,8 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if(!isPaperBagAdded){
-            totalPrice = totalPrice + paperBagPrice;
             isPaperBagAdded = true;
+            this.totalPrice = this.totalPrice + this.paperBagPrice;
         }
 
     }
@@ -72,7 +70,6 @@ public class Pizza {
         // your code goes here
 
         if(!isBillGenerated){
-            isBillGenerated = true;
             this.bill = "Base Price Of The Pizza: "+this.basePrice+"\n";
             if(isCheeseAdded){
                 this.bill = this.bill + "Extra Cheese Added: "+this.cheesePrice+"\n";
@@ -83,8 +80,8 @@ public class Pizza {
             if(isPaperBagAdded){
                 this.bill= bill + "Paperbag Added: "+this.paperBagPrice+"\n";
             }
-            this.bill = this.bill + "Total Price: " + this.totalPrice;
-
+            this.bill = this.bill + "Total Price: " + this.totalPrice+"\n";
+            isBillGenerated = true;
         }
 
         return this.bill;
